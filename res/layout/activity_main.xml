@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <RelativeLayout
+        android:id="@+id/LeftBar"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" >
+
+        <GridLayout
+            android:id="@+id/PaletteBox"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:columnCount="2" >
+
+            <Button
+                android:id="@+id/buttonDRed"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FF800000" />
+
+            <Button
+                android:id="@+id/buttonRed"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FFFF0000" />
+
+            <Button
+                android:id="@+id/buttonDGreen"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FF008000" />
+
+            <Button
+                android:id="@+id/buttonGreen"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FF00FF00" />
+
+            <Button
+                android:id="@+id/buttonViolet"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#663399" />
+
+            <Button
+                android:id="@+id/buttonBlue"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FF0000FF" />
+
+            <Button
+                android:id="@+id/buttonHLBlue"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FF00FFFF" />
+
+            <Button
+                android:id="@+id/buttonYellow"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_row="0"
+                android:background="#FFFF00" />
+        </GridLayout>
+
+        <RelativeLayout
+            android:id="@+id/ShapeBox"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/PaletteBox" >
+
+            <TextView
+                android:id="@+id/textViewShapes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ButtonRectangle"
+                android:text="@string/shapes_" />
+
+            <Button
+                android:id="@+id/ButtonRectangle"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ButtonTriangle"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rectangle"
+                android:textSize="0sp" />
+
+            <Button
+                android:id="@+id/ButtonTriangle"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ButtonCircle"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/triangle"
+                android:textSize="0sp" />
+
+            <Button
+                android:id="@+id/ButtonCircle"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ControlPane"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/LeftBar" >
+
+        <Button
+            android:id="@+id/ButtonSave"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="@string/Save" />
+        
+        <Button
+            android:id="@+id/ButtonEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ButtonReset"
+            android:minWidth="48dp"
+            android:text="@string/Email" />
+            
+        <Button android:id="@+id/ButtonReset" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_toRightOf="@+id/ButtonSave" android:text="@string/Reset"/>
+        
+        <Button android:id="@+id/ButtonExit" style="?android:attr/buttonStyleSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_alignParentRight="true" android:text="@string/Exit" android:layout_toRightOf="@+id/ButtonEmail"/>
+
+
+
+    </RelativeLayout>
+
+    <com.jcasey.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ControlPane"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/LeftBar" />
+
+</RelativeLayout>
